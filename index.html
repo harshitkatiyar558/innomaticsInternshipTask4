@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"
+    href="https://img.freepik.com/free-vector/gradient-mobile-store-logo-template_23-2149732055.jpg?ga=GA1.1.2087544426.1738252208&semt=ais_hybrid"">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#" onclick="showAllProducts()"
+            ><img
+              src="https://img.freepik.com/free-vector/gradient-mobile-store-logo-template_23-2149732055.jpg?ga=GA1.1.2087544426.1738252208&semt=ais_hybrid"
+              alt=""
+          /></a>
+        </li>
+        <li><a href="#" onclick="showAllProducts()">All</a></li>
+        <li><a href="#" onclick="filterProducts('Mobiles')">Mobiles</a></li>
+        <li><a href="#" onclick="filterProducts('Laptops')">Laptops</a></li>
+        <li>
+          <a href="#" onclick="filterProducts('Accessories')">Accessories</a>
+        </li>
+      </ul>
+      <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+    </nav>
+
+    <section id="product-list">
+      <div class="product" data-category="Mobiles">
+        <img src="img/mobile1.avif" alt="iPhone 15 Pro Max" />
+        <h3>iPhone 15 Pro Max</h3>
+        <p>$1200.00</p>
+        <button onclick="addToCart('iPhone 15 Pro Max', 1200)">
+          Add to Cart
+        </button>
+      </div>
+      <div class="product" data-category="Mobiles">
+        <img src="img/mobile2.avif" alt="Samsung Galaxy S23 Ultra" />
+        <h3>Samsung Galaxy S23 Ultra</h3>
+        <p>$1100.00</p>
+        <button onclick="addToCart('Samsung Galaxy S23 Ultra', 1100)">
+          Add to Cart
+        </button>
+      </div>
+      <div class="product" data-category="Mobiles">
+        <img src="./img/mobile3.avif" alt="Google Pixel 8 Pro" />
+        <h3>Google Pixel 8 Pro</h3>
+        <p>$1000.00</p>
+        <button onclick="addToCart('Google Pixel 8 Pro', 1000)">
+          Add to Cart
+        </button>
+      </div>
+      <div class="product" data-category="Mobiles">
+        <img src="./img/mobile4.avif" alt="OnePlus 11" />
+        <h3>OnePlus 11</h3>
+        <p>$800.00</p>
+        <button onclick="addToCart('OnePlus 11', 800)">Add to Cart</button>
+      </div>
+
+      <div class="product" data-category="Laptops">
+        <img src="./img/l1.avif" alt="MacBook Pro 16" />
+        <h3>MacBook Pro 16</h3>
+        <p>$2500.00</p>
+        <button onclick="addToCart('MacBook Pro 16', 2500)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="Laptops">
+        <img src="./img/l2.avif" alt="Dell XPS 15" />
+        <h3>Dell XPS 15</h3>
+        <p>$2000.00</p>
+        <button onclick="addToCart('Dell XPS 15', 2000)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="Laptops">
+        <img src="./img/l3.avif" alt="HP Spectre x360" />
+        <h3>HP Spectre x360</h3>
+        <p>$1800.00</p>
+        <button onclick="addToCart('HP Spectre x360', 1800)">
+          Add to Cart
+        </button>
+      </div>
+      <div class="product" data-category="Laptops">
+        <img src="./img/l4.avif" alt="Lenovo ThinkPad X1 Carbon" />
+        <h3>Lenovo ThinkPad X1 Carbon</h3>
+        <p>$1700.00</p>
+        <button onclick="addToCart('Lenovo ThinkPad X1 Carbon', 1700)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" data-category="Accessories">
+        <img src="./img/headphone.avif" alt="Sony WH-1000XM5" />
+        <h3>Sony WH-1000XM5</h3>
+        <p>$400.00</p>
+        <button onclick="addToCart('Sony WH-1000XM5', 400)">Add to Cart</button>
+      </div>
+      <div class="product" data-category="Accessories">
+        <img src="./img/charger.jpg" alt="Anker Nano II 65W" />
+        <h3>Anker Nano II 65W</h3>
+        <p>$50.00</p>
+        <button onclick="addToCart('Anker Nano II 65W', 50)">
+          Add to Cart
+        </button>
+      </div>
+      <div class="product" data-category="Accessories">
+        <img src="./img/smartWatch.avif" alt="Apple Watch Ultra" />
+        <h3>Apple Watch Ultra</h3>
+        <p>$800.00</p>
+        <button onclick="addToCart('Apple Watch Ultra', 800)">
+          Add to Cart
+        </button>
+      </div>
+      <div class="product" data-category="Accessories">
+        <img src="./img/powerBank.webp" alt="Anker PowerCore 26800mAh" />
+        <h3>Anker PowerCore 26800mAh</h3>
+        <p>$70.00</p>
+        <button onclick="addToCart('Anker PowerCore 26800mAh', 70)">
+          Add to Cart
+        </button>
+      </div>
+    </section>
+
+    <aside id="cart">
+      <h2>Cart</h2>
+      <div id="cart-items"></div>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <button onclick="clearCart()">Empty Cart</button>
+    </aside>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
